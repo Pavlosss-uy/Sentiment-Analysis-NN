@@ -1,86 +1,43 @@
-# Sentiment Analysis using Neural Networks
+# 🧠 Sentiment Analysis with Neural Networks
 
-A deep learning project for multi-class sentiment analysis of text reviews. The model classifies reviews into five sentiment categories: **Very bad**, **Bad**, **Good**, **Very good**, and **Excellent**.
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange)
+![Status](https://img.shields.io/badge/Status-Completed-green)
 
-## Project Structure
+A comprehensive Deep Learning NLP project that classifies text reviews into five distinct sentiment categories. This repository demonstrates the implementation and comparison of various neural network architectures, ranging from simple Dense networks to Transformers.
 
-```
-NN Project/
-├── data/                  # Datasets (not tracked by Git)
-│   ├── train.csv
-│   ├── test.csv
-│   ├── submission.csv
-│   └── Test cases.xlsx
-├── models/                # Trained models (not tracked by Git)
-│   ├── tensorflow_model.keras
-│   └── tensorflow_model/
-├── notebooks/             # Jupyter notebooks
-│   ├── sentimental_analysis_neural_network_project.ipynb
-│   └── test_script.ipynb
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
+---
 
-## Getting Started
+## 📖 Project Overview
 
-### Prerequisites
+Understanding user sentiment is critical for data-driven decision-making. This project builds an end-to-end Natural Language Processing (NLP) pipeline to predict sentiment on a 5-point scale:
+1.  **Very Bad**
+2.  **Bad**
+3.  **Good**
+4.  **Very Good**
+5.  **Excellent**
 
-- Python 3.11+
-- pip
+The project addresses challenges such as **class imbalance**, **text preprocessing**, and **model optimization** using TensorFlow/Keras.
 
-### Installation
+### Key Features
+* **Advanced Preprocessing:** Custom pipeline including contraction expansion, emoji handling, stopword removal, and stemming.
+* **Vectorization:** Utilizes TensorFlow's `TextVectorization` layer for end-to-end deployment capability.
+* **Model Comparison:** Implements and benchmarks 5 different architectures (Dense, CNN, RNN, LSTM, Transformer).
+* **Imbalance Handling:** Uses Class Weighting to ensure fair learning across minority classes.
 
-1. Clone the repository:
+---
 
-   ```bash
-   git clone <repository-url>
-   cd NN-Project
-   ```
+## 📂 Repository Structure
 
-2. Install the required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Download NLTK data (required for text preprocessing):
-
-   ```python
-   import nltk
-   nltk.download('stopwords')
-   nltk.download('punkt')
-   nltk.download('punkt_tab')
-   ```
-
-4. Place your dataset files (`train.csv`, `test.csv`, etc.) in the `data/` directory.
-
-### Running the Notebooks
-
-1. Launch Jupyter Notebook:
-
-   ```bash
-   jupyter notebook
-   ```
-
-2. Open `notebooks/sentimental_analysis_neural_network_project.ipynb` to train and evaluate the models.
-
-3. Open `notebooks/test_script.ipynb` to run test predictions using a pre-trained model.
-
-## Models
-
-The project explores and compares several neural network architectures for sentiment classification:
-
-- **Single-Layer Model** — A simple embedding + dense layer baseline.
-- **Multi-Layer Model** — A deeper network with hidden layers and dropout.
-- **CNN** — Convolutional neural network for text classification.
-- **RNN (LSTM)** — Recurrent neural network using LSTM cells.
-- **Transformer** — A custom Transformer encoder with multi-head self-attention.
-
-## Tech Stack
-
-- **TensorFlow / Keras** — Deep learning framework
-- **NLTK** — Natural language preprocessing
-- **Pandas & NumPy** — Data manipulation
-- **Scikit-learn** — Evaluation metrics and utilities
-- **Matplotlib** — Visualization
+```text
+NN-Project-Repo/
+├── data/                   # Dataset files (ignored by Git)
+│   ├── train.csv           # Training data
+│   └── test.csv            # Testing data
+├── models/                 # Saved model artifacts (ignored by Git)
+│   └── tensorflow_model/   # SavedModel format for deployment
+├── notebooks/              # Experimentation & Testing
+│   ├── sentimental_analysis_neural_network_project.ipynb  # Main training pipeline
+│   └── test_script.ipynb   # Inference script for new data
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
