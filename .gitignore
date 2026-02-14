@@ -1,0 +1,18 @@
+# Data files (large datasets)
+data/*
+!data/.gitkeep
+
+# Model files (large trained models)
+models/*
+!models/.gitkeep
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
